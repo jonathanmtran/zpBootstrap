@@ -1,0 +1,6 @@
+*1.4.2.1
+- inc_header.php
+	- fix an issue on RSS Feed : use options 'RSS_album_image' and 'RSS_articles'
+
+* 1.4.2
+initial version
