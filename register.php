@@ -10,6 +10,13 @@
 				<div class="span10 offset1">
 					<div class="post">
 						<?php printRegistrationForm(); ?>
+						<script type="text/javascript">
+							jQuery(document).ready(function($) {
+								$('#zpB_passwordform').modal({
+									show: true
+								});
+							});
+						</script>
 					</div>
 				</div>
 			</div>

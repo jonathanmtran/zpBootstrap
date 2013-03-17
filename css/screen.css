@@ -67,27 +67,21 @@ body {
 	padding-top: 0;
 }
 .navbar {
-	font-family: Georgia, "Times New Roman", Times,serif;
+	font-family: Georgia, "Times New Roman", Times, serif;
 }
 .navbar .brand {
 	color: #eee;
 	font-size: 18px;
 	padding: 10px 20px;
 }
-.navbar .nav .active > a, .navbar .nav .active > a:hover {
-	color: #eee;
+.navbar .btn-navbar {
+	margin-bottom: 0;
 }
 .flags li {
 	padding: 4px 3px 2px 4px;
 }
 .flags img {
 	vertical-align: top;
-}
-.rss {
-	display: inline-block;
-	width: 33px;
-	height: 32px;
-	background: transparent url(../images/feed_icon.png) no-repeat;
 }
 
 /*------------------------------------
@@ -113,9 +107,6 @@ body {
 .disabled_nav {
 	display: none;
 }
-.nav-pills > li > a:hover {
-	background-color: #fff;
-}
 ul.nav-label, ul.nav-label li {
 	display: inline-block;
 	margin-left: 0!important;
@@ -139,17 +130,28 @@ ul.nav-label, ul.nav-label li {
 	max-width: 43%;
 }
 .thumbnail img {
+	height: auto;
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
 }
 img {
 	max-width: 100%;
+	height: auto;
 }
 img.ombre {
 	-moz-box-shadow: 2px 2px 9px #111;
 	-webkit-box-shadow: 2px 2px 9px #111;
 	box-shadow: 2px 2px 9px #111;
+}
+#imagemetadata {
+	margin: 15px;
+	padding: 10px 15px;
+	border: 1px solid #ccc;
+	-moz-border-radius: 5px;
+	-khtml-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
 }
 
 /*------------------------------------
@@ -335,18 +337,24 @@ form#search_form {
 input#search_submit {
 	margin: 0;
 }
-#search ul {
+#searchextrashow{
 	background: #eee;
 	border: 1px solid #bbb;
 	position: absolute;
-	left: 15px;
-	top:
-	z-index: 1000;
 	text-align: left;
-	list-style: none;
+	left: 5px;
+	z-index: 1000;
 	margin: 4px 0 0;
-	overflow: visible;
 	padding: 5px 10px;
+	overflow: visible;
+}
+#searchextrashow  > label{
+	display: inline-block;
+}
+#search ul {
+	list-style: none;
+	margin: 5px 0 0 ;
+	padding: 0;
 }
 #search il {
 	margin: 0;
@@ -463,6 +471,9 @@ input#search_submit {
 		border: 0;
 		width: auto;
 		margin: 0 auto;
+	}
+	.thumbnails {
+		margin-left: -20px;
 	}
 	.nav_news {
 		margin-left: 0;

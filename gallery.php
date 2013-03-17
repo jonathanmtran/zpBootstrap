@@ -16,7 +16,7 @@
 				</h4>
 			</div>
 
-			<?php printPageListWithNav('&laquo;', '&raquo;', false, true, 'pagination', null, true, 7); ?>
+			<?php printPageListWithNav('«', '»', false, true, 'pagination', NULL, true, 7); ?>
 
 			<?php if (!getOption('zpB_homepage')) { ?>
 			<div class="page-header bottom-margin-reset">
@@ -26,6 +26,6 @@
 
 			<?php include('inc_print_album_thumb.php'); ?>
 
-			<?php printPageListWithNav('&laquo;', '&raquo;', false, true, 'pagination', null, true, 7); ?>
+			<?php printPageListWithNav('«', '»', false, true, 'pagination', NULL, true, 7); ?>
 
 <?php include('inc_footer.php'); ?>

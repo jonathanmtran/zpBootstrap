@@ -2,17 +2,17 @@
 
 <head>
 <meta http-equiv=Content-Type content="text/html; charset=utf-8">
-<title>zpBootstrap – a ZenPhoto/ZenPage theme</title>
+<title>zpBootstrap 1.4.3 – a ZenPhoto/ZenPage theme</title>
 <style>
 <!--
-body{background-color:#eee; color:#333; font-size:14px; font-family:"Corbel","sans-serif";}
-h2{font-size:100%;font-style:italic;font-family:"Georgia","serif";}
-h3{font-size:110%;font-family:"Georgia","serif";}
-h4{font-size:90%;font-style:italic;font-family:"Georgia","serif";}
-a, a:active{color:#0088cc; text-decoration:none;}
-a:focus, a:hover{text-decoration:none;}
-ol{margin-bottom:0cm;}
-ul{margin-bottom:0cm;}
+body{background-color: #eee; color: #333; font-size: 90%; font-family: "Corbel","sans-serif";}
+h2{font-size: 100%; font-style: italic;font-family: "Georgia","serif";}
+h3{font-size: 110%; font-family: "Georgia","serif";}
+h4{font-size: 90%; font-style: italic; font-family: "Georgia","serif";}
+a, a:active{color: #0088CC; text-decoration: none;}
+a:focus, a:hover{color: #005580; text-decoration: underline;}
+ol{margin-bottom: 0cm;}
+ul{margin-bottom: 0cm;}
 -->
 </style>
 </head>
@@ -25,9 +25,10 @@ ul{margin-bottom:0cm;}
 <h2><a name="english"></a>English version - <a title="Francais" href="#francais">Version Française</a></h2>
 <h3>zpBootstrap – a ZenPhoto/ZenPage theme</h3>
 <p>zpBootstrap is a « Responsive » theme for ZenPhoto.</p>
+<p><span style='color: red'><b>Please report bugs on the forum and I will try to fix as soon as possible.</b></span></p>
 <p><img style="max-width: 100%;" src="images/bootstrap_home.jpg" alt="bootstrap_home" /></p>
 <h4>Description</h4>
-<p><span style="color: #ff0000;"><strong>Important:</strong></span> To use the release <strong>1.4.2</strong> of the theme, you must have ZenPhoto <strong>1.4.2</strong> (or more).</p>
+<p><span style="color: #ff0000;"><strong>Important:</strong></span> To use the release <strong>1.4.3</strong> of the theme, you must have ZenPhoto <strong>1.4.3</strong> (or more).<br /> If you use an older release of ZenPhoto, see <a title="Archives of zpBootstrap" href="http://www.vincentbourganel.fr/pages/zpbootstrap-archives">Archives of zpBootstrap</a>.</p>
 <p>Scripts used:</p>
 <ul>
 <li><a href="http://twitter.github.com/bootstrap/" target="_blank">Bootstrap</a> (HTML, CSS, and JS toolkit for Responsive WebSite)</li>
@@ -38,18 +39,27 @@ ul{margin-bottom:0cm;}
 </ul>
 <p>The theme supports the following ZenPhoto plugins:</p>
 <ul>
-<li>comment_form, contact_form, dynamic-locale, flag_thumbnail, rating, register_user, user_login-out, zenpage</li>
+<li>comment_form, contact_form, dynamic-locale, flag_thumbnail, GoogleMap <strong>(new)</strong>, rating, register_user, user_login-out, zenpage</li>
 </ul>
 <p>The theme does not support the following ZenPhoto plugins :</p>
 <ul>
 <li>colorbox and slideshow (zpBoostrap uses and configures it's own colorbox and modal plugins)</li>
-<li>GoogleMap and EXIF (not enough time to do that in this first release)</li>
 </ul>
-<p> </p>
+<h4>Major improvements of 1.4.3 release</h4>
+<ul>
+<li>Upgrade to bootstrap 2.0.4 (release of 06/01/2012)</li>
+<li>The homepage's slideshow links to the gallery rather than the images</li>
+<li>Supports GoogleMap plugin</li>
+<li>Supports new option to display Exif data</li>
+<li>Rewrite of register form to be compliant to zenphoto 1.4.3 (inspired from register_user_form.php and printPasswordForm.php)</li>
+<li>Some improvements to be compliant with ZenPhoto 1.4.3 <strong>(read changelog.txt)</strong></li>
+<li>Some graphical improvements <strong>(read changelog.txt)</strong></li>
+<li>Fix some issues <strong>(read changelog.txt)</strong></li>
+</ul>
 <h4>Installation</h4>
 <ol>
 <li>Upload the zip file to your computer,</li>
-<li>Unzip the downloaded zip file locally, and upload the <span style="font-family: courier new,courier;">zpBoostrap</span>  folder to the directory <span style="font-family: courier new,courier;">/themes/</span> of your ZenPhoto site,</li>
+<li>Unzip the downloaded zip file locally, and upload the <span style="font-family: courier new,courier;">zpBoostrap</span> folder to the directory <span style="font-family: courier new,courier;">/themes/</span> of your ZenPhoto site,</li>
 <li>In ZenPhoto administration, go to the Themes tab and activate the zpBootstrap theme,</li>
 <li>Navigate to Options&gt;Theme to view and configure the available options for zpBootstrap.</li>
 </ol>
@@ -60,17 +70,19 @@ ul{margin-bottom:0cm;}
 </ol>
 <h4>For the theme works well, I advise you</h4>
 <ul>
-<li>To enter <strong>the title and  url of your <strong>website</strong>, the title and <strong>description</strong> of your gallery</strong> in admin&gt;options&gt;gallery.</li>
+<li>To enter <strong>the title and url of your <strong>website</strong>, the title and <strong>description</strong> of your gallery</strong> in admin&gt;options&gt;gallery.</li>
 <li><strong>To make responsive images in news and pages.</strong><br />To do that, edit the html source of news and pages and add <span style="font-family: courier new,courier;">class="remove-attributes"</span> on each image (the result should be <span style="font-family: courier new,courier;">&lt; img class="remove-attributes" src="the_path_to_your_image" /&gt;</span>)</li>
 </ul>
+<p>&nbsp;</p>
 <p>&nbsp;</p>
 <!-- French -->
 <h2><a name="francais"></a><a title="english" href="#english">English version</a> - Version Française</h2>
 <h3>zpBootstrap – un thème ZenPhoto/ZenPage</h3>
 <p>zpBootstrap est un thème « Responsive » pour ZenPhoto.</p>
+<p><span style='color: red'><b>Rapportez les bugs sur le forum ZenPhoto.org et j'essaierais de les corriger aussitôt que possible.</b></span></p>
 <p><img style="max-width: 100%;" src="images/bootstrap_gallery.jpg" alt="bootstrap_gallery" /></p>
 <h4>Description</h4>
-<p><span style="color: #ff0000;"><strong>Important :</strong></span> Pour utiliser la version <strong>1.4.2</strong> du theme, vous devez utiliser ZenPhoto <strong>1.4.2</strong> (ou plus).</p>
+<p><span style="color: #ff0000;"><strong>Important :</strong></span> Pour utiliser la version <strong>1.4.3</strong> du thème, vous devez utiliser ZenPhoto <strong>1.4.3</strong> (ou plus).<br /> Si vous utilisez une ancienne version de ZenPhoto, consultez les <a title="Archives de zpBootstrap" href="http://www.vincentbourganel.fr/pages/zpbootstrap-archives">Archives de zpBootstrap</a>.</p>
 <p>Scripts utilisés :</p>
 <ul>
 <li><a href="http://twitter.github.com/bootstrap/" target="_blank">Bootstrap</a> (Framework HTML, CSS, et JS pour construire des sites « Responsives »)</li>
@@ -81,14 +93,23 @@ ul{margin-bottom:0cm;}
 </ul>
 <p>Le thème supporte les plugins ZenPhoto suivants :</p>
 <ul>
-<li>comment_form, contact_form<strong></strong>, dynamic-locale, flag_thumbnail, rating, register_user, user_login-out, zenpage</li>
+<li>comment_form, contact_form, dynamic-locale, flag_thumbnail, GoogleMap <strong>(nouveau)</strong>, rating, register_user, user_login-out, zenpage</li>
 </ul>
 <p>Le thème ne supporte pas les plugins ZenPhoto suivants :</p>
 <ul>
 <li>colorbox et slideshow (zpBoostrap utilise et configure ces propres plugins colorbox et modal)</li>
-<li>GoogleMap et EXIF (pas assez de temps pour les embarquer dans cette première version)</li>
 </ul>
-<p> </p>
+<h4>Améliorations majeures de la version 1.4.3</h4>
+<ul>
+<li>Migration vers bootstrap 2.0.4 (version du 01/06/2012)</li>
+<li>Le slideshow de la page d'accueil renvoie vers la galerie plutôt que vers les images</li>
+<li>Supporte le plugin GoogleMap</li>
+<li>Supporte une nouvelle option pour afficher les données Exif</li>
+<li>Ré-écriture du formulaire d'inscription pour être compatible avec zenphoto 1.4.3 (inspiré de register_user_form.php et printPasswordForm.php)</li>
+<li>Quelques améliorations pour être compatible avec Zenphoto 1.4.3 <strong>(voir changelog.txt)</strong></li>
+<li>Quelques améliorations graphiques <strong>(voir changelog.txt)</strong></li>
+<li>Corrections de quelques bugs <strong>(voir changelog.txt)</strong></li>
+</ul>
 <h4>Installation</h4>
 <ol>
 <li>Téléchargez le fichier zip sur votre ordinateur,</li>
@@ -99,7 +120,7 @@ ul{margin-bottom:0cm;}
 <h4>Options</h4>
 <ol>
 <li>Vous pouvez afficher une page d'accueil, avec un diaporama de 5 images aléatoires issues de la galerie, la description de la galerie et la dernière actualité,</li>
-<li>Un seul flux  RSS est affiché : allez sur Options&gt;Flux RSS et choisissez le flux à utiliser (le flux "Toutes les actualités" est prioritaire sur le flux "Galerie").</li>
+<li>Un seul flux RSS est affiché : allez sur Options&gt;Flux RSS et choisissez le flux à utiliser (le flux "Toutes les actualités" est prioritaire sur le flux "Galerie").</li>
 </ol>
 <h4>Pour que le thème fonctionne bien, je vous conseille</h4>
 <ul>

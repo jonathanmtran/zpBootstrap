@@ -94,7 +94,7 @@
 							</div>
 						<?php }
 
-						if($required) { ?>
+						if ($required) { ?>
 							<div class="control-group controls">
 								<strong><?php echo gettext('*Required fields'); ?></strong>
 							</div>

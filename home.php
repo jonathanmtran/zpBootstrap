@@ -10,7 +10,22 @@
 				<?php if (($_zp_gallery->getNumImages(true)) > 0) { ?>
 				<div class="span10 offset1">
 					<div class="flexslider">
-						<?php printRandomImages(5, 'slides', 'all', '' , 780, 400, true); ?>
+						<?php 
+						/*printRandomImages(5, 'slides', 'all', '' , 780, 400, true);*/
+						echo "<ul class=\"slides\">";
+						for ($i=1; $i<=5; $i++) {
+							echo "<li>\n";
+							$randomImage = getRandomImages();
+							if (is_object($randomImage) && $randomImage->exists) {
+								makeImageCurrent($randomImage);
+								echo "<a href=\"" . htmlspecialchars(getCustomPageURL("gallery")) . "\" title=\"" . html_encode(gettext('Gallery')) . "\">";
+								printCustomSizedImage(gettext('Gallery'), null, 780, 400, 780, 400);
+								echo "</a>";
+							}
+							echo "</li>\n";
+						}
+						echo "</ul>";
+						?>
 					</div>
 				</div>
 				<?php } else { ?>

@@ -5,7 +5,7 @@
 				<div class="row">
 					<?php if (getOption('allow_search')) { ?>
 					<div class="span6 pull-right">
-						<?php printSearchForm('', 'search', '', gettext('Search'), "$_zp_themeroot/images/search-drop.png", null, null,"$_zp_themeroot/images/reset.gif" ); ?>
+						<?php printSearchForm(); ?>
 					</div>
 					<?php } ?>
 					<div class="span6 pull-left">
@@ -20,10 +20,12 @@
 							}
 							if (!zp_loggedin()) {
 								if (function_exists('printUserLogin_out')) {
-									printUserLogin_out(' | ', '', 2); ?>
+									printUserLogin_out(' | ', '', 1); ?>
 									<script type="text/javascript">
+										$('.passwordform').before('| <a href="#zpB_login_passwordform" data-toggle="modal" class="zpB_logonlink" title="<?php echo gettext('Login'); ?>"><?php echo gettext('Login'); ?></a>');
+										
 										$('#zpB_login_passwordform').modal({
-											show: false
+											show: true
 										});
 									</script>
 								<?php
@@ -47,8 +49,11 @@
 
 	</div> <!-- /wrap -->
 
+	<!-- a supprimer en prod -->
+	<!-- <div class="resize"></div> -->
+
 	<?php zp_apply_filter('theme_body_close'); ?>
 
 	</body>
 </html>
-<!-- zpBootstrap 1.0 - a ZenPhoto/ZenPage theme by Vincent3569 -->
+<!-- zpBootstrap 1.4.3 - a ZenPhoto/ZenPage theme by Vincent3569 -->

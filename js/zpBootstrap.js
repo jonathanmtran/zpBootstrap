@@ -52,13 +52,7 @@ jQuery(document).ready(function($) {
 	$('#passwordform')
 		.removeAttr('id')
 		.attr('id', 'zpB_login_passwordform');
-	$('.logonlink')
-		.addClass('zpB_logonlink')
-		.removeClass('logonlink')
-		.attr('href', '#zpB_login_passwordform')
-		.attr('data-toggle', 'modal');
-	$('#passwordform_enclosure').removeAttr('style');
-	$('#passwordform_enclosure #zpB_login_passwordform').addClass('modal hide');
+	$('#zpB_login_passwordform').addClass('modal hide');
 
 	$('#admin h3 a')
 		.removeAttr('href')
@@ -75,8 +69,19 @@ jQuery(document).ready(function($) {
 	/* search form */
 	$('form#search_form').addClass('navbar-search');
 	$('input#search_input').addClass('search-query input-medium');
-	$('form#search_form input[type="submit"]').addClass('btn btn-inverse');
+	$('form#search_form input[type="submit"]')
+		.addClass('btn btn-inverse');
 	$('#search').addClass('pull-right');
+	$('#searchfields_icon').replaceWith('<i class="icon-list icon-white" title="options de recherche"></i>');
+
+	/* google map */
+	$('#googlemap_toggle').remove();
+	$('.google_map').remove();
+	$('#googlemap_data')
+		.removeAttr('id')
+		.attr('id', 'zpB_googlemap_data')
+		.removeClass('hidden_map');
+	$('.google_map').remove();
 
 	/* comment form */
 	$('form#commentform input#code').addClass('input-mini');
@@ -87,6 +92,5 @@ jQuery(document).ready(function($) {
 	if ($('#commentform .errorbox').length){
 		$('#comment').collapse('show');
 	}
-
 
 });

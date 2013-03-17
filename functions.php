@@ -77,8 +77,8 @@ function zpB_printSlideShowLink($linktext='') {
  */
 function zpB_checkPlugin() {
 	if (!getOption('zpB_disablewarning')) {
-		$plugin_count = 0;
-		if (getOption('zp_plugin_colorbox')) {
+		$plugin_count = 0; $warning_item = '';
+		if (getOption('zp_plugin_colorbox_js')) {
 			$warning_item .= gettext_th('<li>Disable <strong><em>Colorbox</em></strong> plugin (zpBoostrap uses and configures it\'s own colorbox and modal plugins)</li>', 'zpBootstrap');
 			$plugin_count++;
 		}

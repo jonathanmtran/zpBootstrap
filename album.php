@@ -12,10 +12,9 @@
 						<?php printCustomPageURL(getGalleryTitle(), 'gallery'); ?>
 					<?php } else { ?>
 						<a href="<?php echo html_encode(getGalleryIndexURL()); ?>" title="<?php echo gettext('Albums Index'); ?>"><?php echo html_encode(getGalleryTitle()); ?></a>
-					<?php } ?>
-					<span class="divider"> &raquo; </span>
-					<?php printParentBreadcrumb('', '<span class="divider"> &raquo; </span>', '<span class="divider"> &raquo; </span>'); ?>
-					<?php printAlbumTitle(true); ?>
+					<?php } ?>&raquo;
+					<?php printParentBreadcrumb('', ' » ', ' » '); ?>
+					<?php printAlbumTitle(); ?>
 				</h4>
 			</div>
 
@@ -27,7 +26,7 @@
 			</ul>
 			<?php } ?>
 
-			<?php printPageListWithNav('&laquo;', '&raquo;', false, true, 'pagination', null, true, 7); ?>
+			<?php printPageListWithNav('«', '»', false, true, 'pagination', NULL, true, 7); ?>
 
 			<div class="page-header bottom-margin-reset">
 				<p><?php printAlbumDesc(true); ?></p>
@@ -37,7 +36,31 @@
 
 			<?php include('inc_print_image_thumb.php'); ?>
 
-			<?php printPageListWithNav('&laquo;', '&raquo;', false, true, 'pagination', null, true, 7); ?>
+			<?php printPageListWithNav('«', '»', false, true, 'pagination', NULL, true, 7); ?>
+
+			<?php if (function_exists('printGoogleMap')) {
+				$MAP = new GoogleMapAPI();
+				if (getAlbumGeodata($_zp_current_album, $MAP)) {
+				?>
+				<div class="accordion" id="gmap_accordion">
+					<div class="accordion-heading">
+						<a class="accordion-toggle" data-toggle="collapse" data-parent="#gmap_accordion" href="#zpB_googlemap_data" title="<?php echo gettext('Display or hide the Google Map.'); ?>">
+							<i class="icon-map-marker"></i><?php echo gettext('Google Map'); ?>
+						</a>
+						<?php printGoogleMap(NULL, 'googlemap'); ?>
+						<script type="text/javascript">
+							jQuery(document).ready(function($) {
+								$('#zpB_googlemap_data').collapse(
+									'<?php if ((getoption('gmap_display') == 'hide') || (getoption('gmap_display') == 'colorbox'))  { echo 'hide'; } else if (getoption('gmap_display') == 'show') { echo 'show'; } ?>'
+								);
+							});
+						</script>
+					</div>
+				</div>
+				<?php
+				}
+			}
+			?>
 
 			<?php include('inc_print_comment.php'); ?>
 

@@ -3,7 +3,7 @@
 	<!-- wrap -->
 		<!-- container -->
 			<!-- header -->
-				<h3><?php printNewsIndexURL(gettext('News')); ?><?php printCurrentNewsCategory(' &raquo; ' . gettext('Category') . ' : '); ?><?php printCurrentNewsArchive(' | '); ?></h3>
+				<h3><?php printNewsIndexURL(gettext('News')); ?><?php printCurrentNewsCategory(' | ' . gettext('Category') . ' : '); ?><?php printCurrentNewsArchive(' | '); ?></h3>
 			</div> <!-- /header -->
 
 		<?php if (is_NewsArticle()) {
@@ -46,7 +46,7 @@
 			// news article loop ?>
 
 			<div class="pagination">
-				<?php printNewsPageListWithNav('&raquo;', '&laquo;', true, 'pagination top-margin-reset', true, 7); ?>
+				<?php printNewsPageListWithNav('»', '«', true, 'pagination top-margin-reset', true, 7); ?>
 			</div>
 
 			<div class="row">
@@ -66,7 +66,7 @@
 			<div class="row">
 				<div class="span12">
 					<div class="pagination">
-						<?php printNewsPageListWithNav('&raquo;', '&laquo;', true, 'pagination top-margin-reset', true, 7); ?>
+						<?php printNewsPageListWithNav('»', '«', true, 'pagination top-margin-reset', true, 7); ?>
 					</div>
 				</div>
 			</div>

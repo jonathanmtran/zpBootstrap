@@ -23,9 +23,9 @@
 
 			if ((function_exists('printCommentForm')) && ($comments_open)) {
 				if ($comments_allowed || (getCommentCount() > 0 )) { ?>
-					<div class="accordion" id="accordion">
+					<div class="accordion" id="comment_accordion">
 						<div class="accordion-heading">
-							<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#comment">
+							<a class="accordion-toggle" data-toggle="collapse" data-parent="#comment_accordion" href="#comment">
 								<i class="icon-comment"></i>
 								<?php
 								$num = getCommentCount();

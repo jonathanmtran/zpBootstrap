@@ -70,7 +70,7 @@
 				<?php
 				}
 
-				printPageListWithNav('&laquo;', '&raquo;', false, true, 'pagination', null, true, 7);
+				printPageListWithNav('«', '»', false, true, 'pagination', NULL, true, 7);
 
 				if (getNumAlbums() > 0) {
 					include('inc_print_album_thumb.php');
@@ -79,7 +79,7 @@
 					include('inc_print_image_thumb.php');
 				}
 
-				printPageListWithNav('&laquo;', '&raquo;', false, true, 'pagination', null, true, 7);
+				printPageListWithNav('«', '»', false, true, 'pagination', NULL, true, 7);
 				
 				if ($_zp_page == 1) { //test of zenpage searches
 					if ($numnews > 0) { ?>
