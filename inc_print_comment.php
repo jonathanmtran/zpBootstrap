@@ -2,11 +2,11 @@
 			switch ($_zp_gallery_page) {
 				case 'album.php':
 					$comments_open = getOption('comment_form_albums');
-					$comments_allowed = getCommentsAllowed();
+					$comments_allowed = OpenedForComments(ALBUM);
 					break;
 				case 'image.php':
 					$comments_open = getOption('comment_form_images');
-					$comments_allowed = getCommentsAllowed();
+					$comments_allowed = OpenedForComments(IMAGE);
 					break;
 				case 'pages.php':
 					$comments_open = getOption('comment_form_pages');

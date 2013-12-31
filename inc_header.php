@@ -44,9 +44,9 @@ if (getoption('user_logout_login_form') == 2) { setOption('user_logout_login_for
 
 	<?php
 	if ((getOption('RSS_articles')) && (function_exists('printZenpageRSSHeaderLink'))) {
-		printZenpageRSSHeaderLink('NewsWithImages', '', gettext('News and Gallery RSS'));
+		printRssHeaderLink('NewsWithImages', gettext('News and Gallery RSS'));
 	} else if (getOption('RSS_album_image')) {
-		printRSSHeaderLink('Gallery', gettext('Latest images RSS'));
+		printRssHeaderLink('Gallery', gettext('Latest images RSS'));
 	}
 	?>
 
@@ -236,8 +236,8 @@ if (getoption('user_logout_login_form') == 2) { setOption('user_logout_login_for
 					}
 
 					$rss = false;
-					if ((getOption('RSS_articles')) && (function_exists('printZenpageRSSLink'))) {
-						printZenpageRSSLink('NewsWithImages', '', '', ' ', '', false, 'rss'); $rss = true;
+					if ((getOption('RSS_articles')) && (function_exists('printRssHeaderLink'))) {
+						printRssHeaderLink('NewsWithImages', '', '', ' ', '', false, 'rss'); $rss = true;
 					} else if (getOption('RSS_album_image')) {
 						printRSSLink('Gallery', '', '', ' ', false, 'rss'); $rss = true;
 					}

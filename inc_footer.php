@@ -30,8 +30,7 @@
 									</script>
 								<?php
 								}
-							} else {
-								echo ' | '; printAdminToolbox(); ?>
+							} else { ?>
 								<script type="text/javascript">
 									$('#admin_data').modal({
 										show: false
